@@ -389,6 +389,25 @@ body {
         letter-spacing: 0.05em;
     }
     
+    /* 移动端暗调效果 */
+    .hero-image {
+        filter: brightness(0.2);
+    }
+    
+    .hero-image:hover,
+    .hero-image:active {
+        filter: brightness(0.6);
+    }
+    
+    .project-image {
+        filter: brightness(0.2);
+    }
+    
+    .project-image:hover,
+    .project-image:active {
+        filter: brightness(0.6);
+    }
+    
     .hero-title {
         font-size: 2rem;
         letter-spacing: 0.2em;
