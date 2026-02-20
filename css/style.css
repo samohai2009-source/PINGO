@@ -396,7 +396,7 @@ body {
     
     .hero-image:hover,
     .hero-image:active {
-        filter: brightness(0.6);
+        filter: brightness(0.95);
     }
     
     .project-image {
@@ -405,7 +405,7 @@ body {
     
     .project-image:hover,
     .project-image:active {
-        filter: brightness(0.6);
+        filter: brightness(0.95);
     }
     
     .hero-title {
