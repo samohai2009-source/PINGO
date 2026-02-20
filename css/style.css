@@ -1,0 +1,466 @@
+/* 基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #000;
+    --color-text: #fff;
+    --color-gray: #888;
+    --color-light-gray: #ccc;
+    --font-main: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 导航 */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    mix-blend-mode: difference;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.menu {
+    display: flex;
+    gap: 3rem;
+}
+
+.menu a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    transition: opacity 0.3s;
+}
+
+.menu a:hover {
+    opacity: 0.6;
+}
+
+/* 首屏 */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(0.1);
+    transition: filter 2s ease;
+}
+
+.hero-image:hover {
+    filter: brightness(1);
+}
+
+.placeholder-text {
+    color: var(--color-gray);
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    border: 1px solid var(--color-gray);
+    padding: 2rem 4rem;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: var(--color-light-gray);
+    margin-bottom: 2rem;
+}
+
+.hero-desc {
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    color: var(--color-gray);
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-hint span {
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--color-gray);
+}
+
+/* 项目展示 */
+.projects-section {
+    padding: 0;
+}
+
+.project-item {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(0.1);
+    transition: filter 2s ease;
+}
+
+.project-image:hover {
+    filter: brightness(1);
+}
+
+.project-info {
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    z-index: 10;
+}
+
+.project-year {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--color-gray);
+    margin-bottom: 0.5rem;
+}
+
+.project-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.project-location {
+    font-size: 0.85rem;
+    color: var(--color-gray);
+    letter-spacing: 0.1em;
+}
+
+/* 关于部分 */
+.about-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 4rem;
+    background: #111;
+}
+
+.about-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 0.75rem;
+    letter-spacing: 0.5em;
+    color: var(--color-gray);
+    margin-bottom: 4rem;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 2.2;
+    letter-spacing: 0.1em;
+    margin-bottom: 4rem;
+}
+
+.contact-info {
+    font-size: 0.9rem;
+    color: var(--color-light-gray);
+    letter-spacing: 0.1em;
+}
+
+/* 页脚 */
+.footer {
+    padding: 3rem 4rem;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.footer p {
+    font-size: 0.75rem;
+    color: var(--color-gray);
+    letter-spacing: 0.1em;
+}
+
+/* ABOUT 页面 */
+.about-page {
+    min-height: 100vh;
+    padding-top: 100px;
+    background: #0a0a0a;
+}
+
+.about-main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+.about-text-large {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    letter-spacing: 0.05em;
+}
+
+.about-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 4rem 0;
+    padding-top: 4rem;
+    border-top: 1px solid #333;
+}
+
+.detail-item h3 {
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--color-gray);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.detail-item p {
+    font-size: 0.95rem;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.contact-section {
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 1px solid #333;
+}
+
+.contact-section h3 {
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--color-gray);
+    margin-bottom: 1.5rem;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+}
+
+/* NEWS 页面 */
+.news-page {
+    min-height: 100vh;
+    padding-top: 150px;
+    background: #0a0a0a;
+}
+
+.news-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 4rem 6rem;
+}
+
+.news-list {
+    margin-top: 4rem;
+}
+
+.news-item {
+    padding: 3rem 0;
+    border-bottom: 1px solid #222;
+}
+
+.news-date {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--color-gray);
+    margin-bottom: 1rem;
+}
+
+.news-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.news-excerpt {
+    font-size: 0.95rem;
+    color: var(--color-gray);
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* PROJECTS 页面 */
+.projects-page {
+    padding-top: 80px;
+}
+
+.projects-page .project-item:first-child {
+    height: calc(100vh - 80px);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .nav {
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .logo img {
+        height: 32px;
+    }
+    
+    .menu {
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .menu a {
+        font-size: 0.7rem;
+        letter-spacing: 0.05em;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        letter-spacing: 0.2em;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 0.3em;
+    }
+    
+    .project-info {
+        left: 1.5rem;
+        bottom: 2rem;
+    }
+    
+    .project-title {
+        font-size: 1.5rem;
+    }
+    
+    .project-year, .project-location {
+        font-size: 0.7rem;
+    }
+    
+    .about-section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .about-main {
+        padding: 2rem 1rem;
+    }
+    
+    .about-text-large {
+        font-size: 1.3rem;
+    }
+    
+    .about-text {
+        font-size: 0.9rem;
+    }
+    
+    .about-details {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .news-container {
+        padding: 0 1.5rem 4rem;
+    }
+    
+    .news-title {
+        font-size: 1.2rem;
+    }
+    
+    .footer {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* 小屏手机优化 */
+@media (max-width: 480px) {
+    .nav {
+        padding: 0.8rem 1rem;
+    }
+    
+    .menu {
+        gap: 0.6rem;
+    }
+    
+    .menu a {
+        font-size: 0.65rem;
+    }
+    
+    .hero-title {
+        font-size: 1.6rem;
+    }
+}
