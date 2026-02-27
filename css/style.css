@@ -7,10 +7,21 @@
 
 /* 轮播组件样式 */
 .carousel {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+
+.projects-page .project-item .carousel {
+    filter: brightness(0.1);
+    transition: filter 2s ease;
+}
+
+.projects-page .project-item .carousel:hover {
+    filter: brightness(1);
 }
 
 .carousel-track {
