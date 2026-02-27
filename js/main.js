@@ -30,9 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 初始化所有轮播
 function initCarousels() {
+    console.log('初始化轮播...');
     const carousels = document.querySelectorAll('.carousel');
+    console.log('找到轮播数量:', carousels.length);
     
-    carousels.forEach(carousel => {
+    carousels.forEach((carousel, index) => {
+        console.log('初始化轮播 #' + index);
         const track = carousel.querySelector('.carousel-track');
         const slides = carousel.querySelectorAll('.carousel-slide');
         const dots = carousel.querySelectorAll('.dot');
