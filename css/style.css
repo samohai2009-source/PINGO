@@ -211,6 +211,12 @@ body {
     padding: 0;
 }
 
+.project-item-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
 .project-item {
     position: relative;
     height: 100vh;
